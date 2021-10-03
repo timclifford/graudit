@@ -1,0 +1,27 @@
+{
+  "operation_name": "NoSQLPatientsBySearch",
+  "args": [
+    {
+      "name": "search",
+      "type": "JSONObject"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "name",
+      "type": "fuzzing",
+      "path": "./dictionaryLists/JSON.SQLFuzzing.txt"
+    }
+  ],
+  "query_name": "patients",
+  "type": "query",
+  "fields": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "medical_record",
+      "sub_fields": ["age", "weight", "sex"]
+    }
+  ]
+}

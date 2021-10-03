@@ -1,0 +1,28 @@
+{
+  "operation_name": "BruteForceStrongSignInMutation",
+  "args": [
+    {
+      "name": "email",
+      "type": "String!",
+      "value": "super.admin@superadmin.com"
+    },
+    {
+      "name": "password",
+      "type": "String!"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "password",
+      "type": "wordlist",
+      "path": "./dictionaryLists/xato-net-10-million-passwords-1000000.txt"
+    }
+  ],
+  "query_name": "signinUser",
+  "type": "mutation",
+  "fields": [
+    {
+      "name": "token"
+    }
+  ]
+}

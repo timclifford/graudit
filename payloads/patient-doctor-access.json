@@ -1,0 +1,28 @@
+{
+  "operation_name": "PatientQueryDoctorAccess",
+  "args": [
+    {
+      "name": "name",
+      "type": "String!",
+      "value": "Kevin Vardy"
+    }
+  ],
+  "query_name": "patient",
+  "type": "query",
+  "fields": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "medical_record",
+      "sub_fields": [
+        "age",
+        "weight",
+        "sex",
+        "diabetes",
+        "recent_heart_events",
+        "current_health_assessment"
+      ]
+    }
+  ]
+}

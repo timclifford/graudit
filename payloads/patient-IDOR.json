@@ -1,0 +1,34 @@
+{
+  "operation_name": "PatientsByDoctor",
+  "args": [
+    {
+      "name": "doctor",
+      "type": "String!"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "doctor",
+      "type": "wordlist",
+      "path": "./dictionaryLists/xato-net-usernames-small.txt"
+    }
+  ],
+  "query_name": "patients",
+  "type": "query",
+  "fields": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "medical_record",
+      "sub_fields": [
+        "age",
+        "weight",
+        "sex",
+        "diabetes",
+        "recent_heart_events",
+        "current_health_assessment"
+      ]
+    }
+  ]
+}

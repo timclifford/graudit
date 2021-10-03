@@ -1,0 +1,25 @@
+{
+  "operation_name": "UserByID",
+  "args": [
+    {
+      "name": "_id",
+      "type": "String"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "_id",
+      "type": "fuzzing",
+      "match_pattern": "uuid",
+      "match_pattern_prefix": "61058ea4d1bb361df4bcc",
+      "path": "./dictionaryLists/3-digits-000-999.txt"
+    }
+  ],
+  "query_name": "user",
+  "type": "query",
+  "fields": [
+    {
+      "name": "password"
+    }
+  ]
+}
