@@ -1,0 +1,17 @@
+{
+  "operation_name": "DoSPatientsByDoctor",
+  "args": [
+    {
+      "name": "doctor",
+      "value": "dr-john-doe"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "type": "dos",
+      "path": "./payloads/DoS-patients-query.gql",
+      "concurrent": 100000
+    }
+  ],
+  "type": "template"
+}
