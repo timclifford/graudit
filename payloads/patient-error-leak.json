@@ -1,0 +1,24 @@
+{
+  "operation_name": "PatientByNameErrorLeak",
+  "args": [
+    {
+      "name": "name",
+      "type": "String!"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "name",
+      "type": "wordlist",
+      "match_pattern": "two_words",
+      "path": "./dictionaryLists/FullNames.txt"
+    }
+  ],
+  "query_name": "patient",
+  "type": "query",
+  "fields": [
+    {
+      "name": "name"
+    }
+  ]
+}

