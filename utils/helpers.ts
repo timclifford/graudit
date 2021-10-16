@@ -47,8 +47,6 @@ export function flattenForNested<T extends Record<string, any>>(
       !(Array.isArray(value) && value.length === 0),
     ].every(Boolean);
 
-    // console.log(key);
-
     let newPath = [path, key].filter(Boolean).join(separator);
 
     let hasNumber = /\d/;

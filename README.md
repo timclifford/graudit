@@ -1,24 +1,22 @@
 # graudit-cli
 
-GraphQL DAST Auditing cli reporting tool.
+GraphQL DAST CLI reporting and pen-testing tool.
 
 The primary purpose of this tool is to audit a given GraphQL endpoint to detect
 threats and vulnerabilities.
 
 The results from the scan will pinpoint areas which could be problematic
-threats, referencing CWE and OWASP API Top Ten, and offer mitigation advice in
-order to limit the threat.
+threats based off of OWASP API Top Ten.
 
 ## Features
 
-Graudit will attempt construct a schema via an introspection query and then
-parses the discovered data types into re-useable queries and mutations that are
-used for further analsis.
+Graudit will attempt to construct a schema via an introspection query and then
+parse the discovered data types into re-useable queries and mutations that are
+used for further analysis.
 
 - Run introspection to get queries, mututations and subsciptions
 - Scans over endpoint with an initial introspection query and stores queries,
   mutations and subscriptions.
-
 - Test for introspection
 - Test for nested queries
 - Test for query inputs which allow strings
@@ -143,10 +141,7 @@ Checks
 - Sensitive fields checks
 - HTTPS check
 - Detects other graphql consoles found on domain
-
 - Security headers
-  - HTTP Only
-  - Header information leakage
 
 ## Outputs
 
