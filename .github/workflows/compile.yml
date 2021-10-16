@@ -4,6 +4,8 @@ name: compile
 on:
   push:
     branches: [main]
+    tags:
+      - 'v*'
 
 jobs:
   compile:
