@@ -1,0 +1,28 @@
+query notes($patientId: String!) {
+  notes(patientId: $patientId) {
+    _id
+    patient {
+      _id
+      name
+      address
+      phone_number
+      practice
+      doctor
+      appointments
+      medical_record
+    }
+    text
+    date
+    sender {
+      _id
+      username
+      display_name
+      email
+      password
+      resetToken
+      resetTokenExpiry
+      practice
+      roles
+    }
+  }
+}

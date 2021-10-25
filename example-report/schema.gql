@@ -1,0 +1,470 @@
+""""""
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
+"""A type that decribes GraphQL queries."""
+type Query {
+  """"""
+  user(_id: String): User!
+
+  """"""
+  users: [User!]!
+
+  """"""
+  doctors: [User!]!
+
+  """"""
+  appointment(_id: String, name: String): Appointment
+
+  """"""
+  appointments(practice: String): [Appointment]
+
+  """"""
+  practices: [Practice!]!
+
+  """"""
+  patient(_id: String, name: String): Patient
+
+  """"""
+  patients(search: JSONObject, doctor: String): [Patient!]!
+
+  """"""
+  patientsDirectory(practice: String!): [Patient]
+
+  """"""
+  me: User
+
+  """"""
+  notes(patientId: String!): [Note!]!
+}
+
+"""A type that describes a user."""
+type User {
+  """"""
+  _id: ID!
+
+  """The user's username"""
+  username: String!
+
+  """"""
+  display_name: String
+
+  """"""
+  email: String!
+
+  """"""
+  password: String
+
+  """"""
+  resetToken: String
+
+  """"""
+  resetTokenExpiry: String
+
+  """"""
+  practice: Practice
+
+  """"""
+  roles: [String!]!
+}
+
+"""A type that describes a Practice."""
+type Practice {
+  """"""
+  _id: ID!
+
+  """"""
+  name: String!
+
+  """"""
+  address: String!
+
+  """"""
+  phone_number: String!
+}
+
+"""A type that describes an Appointment."""
+type Appointment {
+  """"""
+  _id: ID!
+
+  """"""
+  patient: Patient!
+
+  """"""
+  doctor: User!
+
+  """"""
+  practice: Practice!
+
+  """"""
+  booked_by: User!
+
+  """"""
+  date: String
+}
+
+"""A type that describes a Patient."""
+type Patient {
+  """"""
+  _id: ID!
+
+  """"""
+  name: String!
+
+  """"""
+  address: String
+
+  """"""
+  phone_number: String
+
+  """"""
+  practice: Practice
+
+  """"""
+  doctor: String
+
+  """"""
+  appointments: [Appointment]
+
+  """"""
+  medical_record: MedicalRecord
+}
+
+"""
+A type that describes a Medical Record. This type contains sensitive patient record fields.
+"""
+type MedicalRecord {
+  """"""
+  _id: ID!
+
+  """"""
+  patient: Patient!
+
+  """"""
+  age: Int
+
+  """"""
+  weight: String
+
+  """"""
+  sex: String
+
+  """"""
+  recent_heart_events: Boolean
+
+  """"""
+  current_health_assessment: HealthRisk
+
+  """"""
+  diabetes: Boolean
+
+  """"""
+  crp: CRPStatus
+
+  """"""
+  notes: [Note]
+}
+
+""""""
+enum HealthRisk {
+  """"""
+  HIGHRISK
+
+  """"""
+  MEDIUMRISK
+
+  """"""
+  LOWRISK
+}
+
+""""""
+enum CRPStatus {
+  """"""
+  ABNORMAL
+
+  """"""
+  NORMAL
+}
+
+"""
+A type that describes a note relating to a patient. This type contains sensitive patient data.
+"""
+type Note {
+  """"""
+  _id: ID!
+
+  """"""
+  patient: Patient
+
+  """"""
+  text: String
+
+  """"""
+  date: String
+
+  """"""
+  sender: User
+}
+
+""""""
+scalar JSONObject
+
+"""A type that decribes GraphQL mutations."""
+type Mutation {
+  """"""
+  signupUser(username: String!, display_name: String, email: String!, password: String!, passwordConfirm: String!, practice: String, roles: [String!]!): Auth!
+
+  """"""
+  signinUser(email: String!, password: String!): Auth
+
+  """"""
+  signoutUser: SuccessMessage!
+
+  """"""
+  requestReset(email: String!): SuccessMessage!
+
+  """"""
+  resetPassword(password: String!, passwordConfirm: String!, resetToken: String!): User!
+
+  """"""
+  addUser(username: String!, display_name: String, email: String!, password: String!, practice: String, roles: [String!]!): Auth!
+
+  """"""
+  updateUser(input: UpdateUserInput!): User!
+
+  """"""
+  deleteUser(input: DeleteUserInput!): String
+
+  """"""
+  addPractice(name: String!, address: String!, phone_number: String!): Practice!
+
+  """"""
+  addPatient(name: String!, address: String, phone_number: String, practice: String, doctor: String!, appointments: [String]): Patient!
+
+  """"""
+  updatePatient(input: UpdatePatientInput!): Patient!
+
+  """"""
+  addMedicalRecord(patient: String!, age: Int, sex: String, weight: String, recent_heart_events: Boolean, current_health_assessment: HealthRisk, diabetes: Boolean, crp: CRPStatus): MedicalRecord!
+
+  """"""
+  updateMedicalRecord(input: UpdateMedicalRecordInput!): MedicalRecord!
+
+  """"""
+  deletePatient(input: DeletePatientInput!): String
+
+  """"""
+  postNote(patient: String!, text: String!, date: String): Note!
+
+  """"""
+  addAppointment(patient: String!, date: String!, booked_by: String, practice: String, doctor: String): Appointment!
+
+  """"""
+  updateAppointment(input: UpdateAppointmentInput!): Appointment!
+
+  """"""
+  deleteAppointment(input: DeleteAppointmentInput!): String
+}
+
+"""
+A type that decribes an authentication response. This will typically return an authentication token.
+"""
+type Auth {
+  """"""
+  token: String!
+}
+
+"""A type that decribes a success message."""
+type SuccessMessage {
+  """"""
+  message: String
+}
+
+"""An input that defines a user update."""
+input UpdateUserInput {
+  """"""
+  user: UserInput!
+
+  """"""
+  patch: UpdateUserPatchInput!
+}
+
+"""An input that defines a user."""
+input UserInput {
+  """"""
+  _id: ID!
+}
+
+"""An input that defines a user patch update."""
+input UpdateUserPatchInput {
+  """"""
+  username: String
+
+  """"""
+  display_name: String
+
+  """"""
+  email: String
+
+  """"""
+  password: String
+
+  """"""
+  resetToken: String
+
+  """"""
+  resetTokenExpiry: String
+
+  """"""
+  practice: String
+
+  """"""
+  roles: [String!]
+}
+
+"""An input that defines a user deletion."""
+input DeleteUserInput {
+  """"""
+  user: UserInput!
+}
+
+""""""
+input UpdatePatientInput {
+  """"""
+  patient: PatientInput!
+
+  """"""
+  patch: UpdatePatientPatchInput!
+}
+
+""""""
+input PatientInput {
+  """"""
+  _id: ID
+
+  """"""
+  name: JSONObject
+}
+
+""""""
+input UpdatePatientPatchInput {
+  """"""
+  name: String
+
+  """"""
+  address: String
+
+  """"""
+  practice: String
+
+  """"""
+  phone_number: String
+
+  """"""
+  doctor: String
+}
+
+""""""
+input UpdateMedicalRecordInput {
+  """"""
+  patient: MedicalRecordInput!
+
+  """"""
+  patch: UpdateMedicalRecordPatchInput!
+}
+
+""""""
+input MedicalRecordInput {
+  """"""
+  _id: ID!
+}
+
+""""""
+input UpdateMedicalRecordPatchInput {
+  """"""
+  patient: String
+
+  """"""
+  age: Int
+
+  """"""
+  weight: String
+
+  """"""
+  sex: String
+
+  """"""
+  recent_heart_events: Boolean
+
+  """"""
+  current_health_assessment: HealthRisk
+
+  """"""
+  diabetes: Boolean
+
+  """"""
+  crp: CRPStatus
+}
+
+""""""
+input DeletePatientInput {
+  """"""
+  patient: PatientInput!
+}
+
+""""""
+input UpdateAppointmentInput {
+  """"""
+  appointment: AppointmentInput!
+
+  """"""
+  patch: UpdateAppointmentPatchInput!
+}
+
+"""An input that defines an appointment."""
+input AppointmentInput {
+  """"""
+  _id: ID!
+}
+
+""""""
+input UpdateAppointmentPatchInput {
+  """"""
+  date: String
+
+  """"""
+  booked_by: String
+
+  """"""
+  doctor: String
+}
+
+""""""
+input DeleteAppointmentInput {
+  """"""
+  patient: PatientInput!
+
+  """"""
+  date: String!
+}
+
+"""A type that decribes GraphQL subcriptions."""
+type Subscription {
+  """"""
+  newNote: Note!
+}
+
+""""""
+scalar JSON
+
+""""""
+enum CacheControlScope {
+  """"""
+  PUBLIC
+
+  """"""
+  PRIVATE
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload

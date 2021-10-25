@@ -1,0 +1,35 @@
+query patient($_id: String, $name: String) {
+  patient(_id: $_id, name: $name) {
+    _id
+    name
+    address
+    phone_number
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    doctor
+    appointments {
+      _id
+      patient
+      doctor
+      practice
+      booked_by
+      date
+    }
+    medical_record {
+      _id
+      patient
+      age
+      weight
+      sex
+      recent_heart_events
+      current_health_assessment
+      diabetes
+      crp
+      notes
+    }
+  }
+}

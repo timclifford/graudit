@@ -1,0 +1,164 @@
+query NoSQLPatientsBySearch(
+ $search0: JSONObject,$search1: JSONObject,$search2: JSONObject,$search3: JSONObject,$search4: JSONObject,$search5: JSONObject,$search6: JSONObject,$search7: JSONObject,$search8: JSONObject,$search9: JSONObject,$search10: JSONObject,$search11: JSONObject,$search12: JSONObject,$search13: JSONObject,$search14: JSONObject,$search15: JSONObject,$search16: JSONObject,$search17: JSONObject,$search18: JSONObject,$search19: JSONObject,$search20: JSONObject,$search21: JSONObject,$search22: JSONObject,$search23: JSONObject,$search24: JSONObject,$search25: JSONObject,$search26: JSONObject,$search27: JSONObject,$search28: JSONObject,$search29: JSONObject,$search30: JSONObject,$search31: JSONObject,$search32: JSONObject,$search33: JSONObject,$search34: JSONObject,$search35: JSONObject,$search36: JSONObject,$search37: JSONObject,$search38: JSONObject,$search39: JSONObject
+) {
+ Q0: patients(search: $search0) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q1: patients(search: $search1) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q2: patients(search: $search2) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q3: patients(search: $search3) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q4: patients(search: $search4) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q5: patients(search: $search5) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q6: patients(search: $search6) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q7: patients(search: $search7) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q8: patients(search: $search8) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q9: patients(search: $search9) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q10: patients(search: $search10) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q11: patients(search: $search11) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q12: patients(search: $search12) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q13: patients(search: $search13) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q14: patients(search: $search14) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q15: patients(search: $search15) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q16: patients(search: $search16) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q17: patients(search: $search17) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q18: patients(search: $search18) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q19: patients(search: $search19) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q20: patients(search: $search20) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q21: patients(search: $search21) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q22: patients(search: $search22) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q23: patients(search: $search23) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q24: patients(search: $search24) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q25: patients(search: $search25) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q26: patients(search: $search26) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q27: patients(search: $search27) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q28: patients(search: $search28) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q29: patients(search: $search29) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q30: patients(search: $search30) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q31: patients(search: $search31) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q32: patients(search: $search32) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q33: patients(search: $search33) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q34: patients(search: $search34) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q35: patients(search: $search35) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q36: patients(search: $search36) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q37: patients(search: $search37) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q38: patients(search: $search38) {
+  name, medical_record {
+ age,weight,sex } 
+}
+ Q39: patients(search: $search39) {
+  name, medical_record {
+ age,weight,sex } 
+}
+}

@@ -1,0 +1,8 @@
+mutation addPractice($name: String!, $address: String!, $phone_number: String!) {
+  addPractice(name: $name, address: $address, phone_number: $phone_number) {
+    _id
+    name
+    address
+    phone_number
+  }
+}

@@ -1,0 +1,35 @@
+mutation addPatient($name: String!, $address: String, $phone_number: String, $practice: String, $doctor: String!, $appointments: [String]) {
+  addPatient(name: $name, address: $address, phone_number: $phone_number, practice: $practice, doctor: $doctor, appointments: $appointments) {
+    _id
+    name
+    address
+    phone_number
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    doctor
+    appointments {
+      _id
+      patient
+      doctor
+      practice
+      booked_by
+      date
+    }
+    medical_record {
+      _id
+      patient
+      age
+      weight
+      sex
+      recent_heart_events
+      current_health_assessment
+      diabetes
+      crp
+      notes
+    }
+  }
+}

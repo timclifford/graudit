@@ -1,0 +1,58 @@
+query PatientByNameErrorLeak(
+ $name0: String!,$name1: String!,$name2: String!,$name3: String!,$name4: String!,$name5: String!,$name6: String!,$name7: String!,$name8: String!,$name9: String!,$name10: String!,$name11: String!,$name12: String!,$name13: String!,$name14: String!,$name15: String!,$name16: String!,$name17: String!
+) {
+ Q0: patient(name: $name0) {
+   name
+ }
+ Q1: patient(name: $name1) {
+   name
+ }
+ Q2: patient(name: $name2) {
+   name
+ }
+ Q3: patient(name: $name3) {
+   name
+ }
+ Q4: patient(name: $name4) {
+   name
+ }
+ Q5: patient(name: $name5) {
+   name
+ }
+ Q6: patient(name: $name6) {
+   name
+ }
+ Q7: patient(name: $name7) {
+   name
+ }
+ Q8: patient(name: $name8) {
+   name
+ }
+ Q9: patient(name: $name9) {
+   name
+ }
+ Q10: patient(name: $name10) {
+   name
+ }
+ Q11: patient(name: $name11) {
+   name
+ }
+ Q12: patient(name: $name12) {
+   name
+ }
+ Q13: patient(name: $name13) {
+   name
+ }
+ Q14: patient(name: $name14) {
+   name
+ }
+ Q15: patient(name: $name15) {
+   name
+ }
+ Q16: patient(name: $name16) {
+   name
+ }
+ Q17: patient(name: $name17) {
+   name
+ }
+}

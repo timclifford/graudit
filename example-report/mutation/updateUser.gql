@@ -1,0 +1,18 @@
+mutation updateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    _id
+    username
+    display_name
+    email
+    password
+    resetToken
+    resetTokenExpiry
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    roles
+  }
+}

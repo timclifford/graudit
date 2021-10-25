@@ -1,0 +1,44 @@
+mutation updateAppointment($input: UpdateAppointmentInput!) {
+  updateAppointment(input: $input) {
+    _id
+    patient {
+      _id
+      name
+      address
+      phone_number
+      practice
+      doctor
+      appointments
+      medical_record
+    }
+    doctor {
+      _id
+      username
+      display_name
+      email
+      password
+      resetToken
+      resetTokenExpiry
+      practice
+      roles
+    }
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    booked_by {
+      _id
+      username
+      display_name
+      email
+      password
+      resetToken
+      resetTokenExpiry
+      practice
+      roles
+    }
+    date
+  }
+}

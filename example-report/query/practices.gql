@@ -1,0 +1,8 @@
+query practices {
+  practices {
+    _id
+    name
+    address
+    phone_number
+  }
+}

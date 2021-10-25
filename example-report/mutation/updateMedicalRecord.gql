@@ -1,0 +1,29 @@
+mutation updateMedicalRecord($input: UpdateMedicalRecordInput!) {
+  updateMedicalRecord(input: $input) {
+    _id
+    patient {
+      _id
+      name
+      address
+      phone_number
+      practice
+      doctor
+      appointments
+      medical_record
+    }
+    age
+    weight
+    sex
+    recent_heart_events
+    current_health_assessment
+    diabetes
+    crp
+    notes {
+      _id
+      patient
+      text
+      date
+      sender
+    }
+  }
+}

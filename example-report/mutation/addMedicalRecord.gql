@@ -1,0 +1,29 @@
+mutation addMedicalRecord($patient: String!, $age: Int, $sex: String, $weight: String, $recent_heart_events: Boolean, $current_health_assessment: HealthRisk, $diabetes: Boolean, $crp: CRPStatus) {
+  addMedicalRecord(patient: $patient, age: $age, sex: $sex, weight: $weight, recent_heart_events: $recent_heart_events, current_health_assessment: $current_health_assessment, diabetes: $diabetes, crp: $crp) {
+    _id
+    patient {
+      _id
+      name
+      address
+      phone_number
+      practice
+      doctor
+      appointments
+      medical_record
+    }
+    age
+    weight
+    sex
+    recent_heart_events
+    current_health_assessment
+    diabetes
+    crp
+    notes {
+      _id
+      patient
+      text
+      date
+      sender
+    }
+  }
+}

@@ -1,0 +1,18 @@
+query user($_id: String) {
+  user(_id: $_id) {
+    _id
+    username
+    display_name
+    email
+    password
+    resetToken
+    resetTokenExpiry
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    roles
+  }
+}

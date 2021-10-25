@@ -1,0 +1,2324 @@
+query PatientsByDoctor(
+ $doctor0: String!,$doctor1: String!,$doctor2: String!,$doctor3: String!,$doctor4: String!,$doctor5: String!,$doctor6: String!,$doctor7: String!,$doctor8: String!,$doctor9: String!,$doctor10: String!,$doctor11: String!,$doctor12: String!,$doctor13: String!,$doctor14: String!,$doctor15: String!,$doctor16: String!,$doctor17: String!,$doctor18: String!,$doctor19: String!,$doctor20: String!,$doctor21: String!,$doctor22: String!,$doctor23: String!,$doctor24: String!,$doctor25: String!,$doctor26: String!,$doctor27: String!,$doctor28: String!,$doctor29: String!,$doctor30: String!,$doctor31: String!,$doctor32: String!,$doctor33: String!,$doctor34: String!,$doctor35: String!,$doctor36: String!,$doctor37: String!,$doctor38: String!,$doctor39: String!,$doctor40: String!,$doctor41: String!,$doctor42: String!,$doctor43: String!,$doctor44: String!,$doctor45: String!,$doctor46: String!,$doctor47: String!,$doctor48: String!,$doctor49: String!,$doctor50: String!,$doctor51: String!,$doctor52: String!,$doctor53: String!,$doctor54: String!,$doctor55: String!,$doctor56: String!,$doctor57: String!,$doctor58: String!,$doctor59: String!,$doctor60: String!,$doctor61: String!,$doctor62: String!,$doctor63: String!,$doctor64: String!,$doctor65: String!,$doctor66: String!,$doctor67: String!,$doctor68: String!,$doctor69: String!,$doctor70: String!,$doctor71: String!,$doctor72: String!,$doctor73: String!,$doctor74: String!,$doctor75: String!,$doctor76: String!,$doctor77: String!,$doctor78: String!,$doctor79: String!,$doctor80: String!,$doctor81: String!,$doctor82: String!,$doctor83: String!,$doctor84: String!,$doctor85: String!,$doctor86: String!,$doctor87: String!,$doctor88: String!,$doctor89: String!,$doctor90: String!,$doctor91: String!,$doctor92: String!,$doctor93: String!,$doctor94: String!,$doctor95: String!,$doctor96: String!,$doctor97: String!,$doctor98: String!,$doctor99: String!,$doctor100: String!,$doctor101: String!,$doctor102: String!,$doctor103: String!,$doctor104: String!,$doctor105: String!,$doctor106: String!,$doctor107: String!,$doctor108: String!,$doctor109: String!,$doctor110: String!,$doctor111: String!,$doctor112: String!,$doctor113: String!,$doctor114: String!,$doctor115: String!,$doctor116: String!,$doctor117: String!,$doctor118: String!,$doctor119: String!,$doctor120: String!,$doctor121: String!,$doctor122: String!,$doctor123: String!,$doctor124: String!,$doctor125: String!,$doctor126: String!,$doctor127: String!,$doctor128: String!,$doctor129: String!,$doctor130: String!,$doctor131: String!,$doctor132: String!,$doctor133: String!,$doctor134: String!,$doctor135: String!,$doctor136: String!,$doctor137: String!,$doctor138: String!,$doctor139: String!,$doctor140: String!,$doctor141: String!,$doctor142: String!,$doctor143: String!,$doctor144: String!,$doctor145: String!,$doctor146: String!,$doctor147: String!,$doctor148: String!,$doctor149: String!,$doctor150: String!,$doctor151: String!,$doctor152: String!,$doctor153: String!,$doctor154: String!,$doctor155: String!,$doctor156: String!,$doctor157: String!,$doctor158: String!,$doctor159: String!,$doctor160: String!,$doctor161: String!,$doctor162: String!,$doctor163: String!,$doctor164: String!,$doctor165: String!,$doctor166: String!,$doctor167: String!,$doctor168: String!,$doctor169: String!,$doctor170: String!,$doctor171: String!,$doctor172: String!,$doctor173: String!,$doctor174: String!,$doctor175: String!,$doctor176: String!,$doctor177: String!,$doctor178: String!,$doctor179: String!,$doctor180: String!,$doctor181: String!,$doctor182: String!,$doctor183: String!,$doctor184: String!,$doctor185: String!,$doctor186: String!,$doctor187: String!,$doctor188: String!,$doctor189: String!,$doctor190: String!,$doctor191: String!,$doctor192: String!,$doctor193: String!,$doctor194: String!,$doctor195: String!,$doctor196: String!,$doctor197: String!,$doctor198: String!,$doctor199: String!,$doctor200: String!,$doctor201: String!,$doctor202: String!,$doctor203: String!,$doctor204: String!,$doctor205: String!,$doctor206: String!,$doctor207: String!,$doctor208: String!,$doctor209: String!,$doctor210: String!,$doctor211: String!,$doctor212: String!,$doctor213: String!,$doctor214: String!,$doctor215: String!,$doctor216: String!,$doctor217: String!,$doctor218: String!,$doctor219: String!,$doctor220: String!,$doctor221: String!,$doctor222: String!,$doctor223: String!,$doctor224: String!,$doctor225: String!,$doctor226: String!,$doctor227: String!,$doctor228: String!,$doctor229: String!,$doctor230: String!,$doctor231: String!,$doctor232: String!,$doctor233: String!,$doctor234: String!,$doctor235: String!,$doctor236: String!,$doctor237: String!,$doctor238: String!,$doctor239: String!,$doctor240: String!,$doctor241: String!,$doctor242: String!,$doctor243: String!,$doctor244: String!,$doctor245: String!,$doctor246: String!,$doctor247: String!,$doctor248: String!,$doctor249: String!,$doctor250: String!,$doctor251: String!,$doctor252: String!,$doctor253: String!,$doctor254: String!,$doctor255: String!,$doctor256: String!,$doctor257: String!,$doctor258: String!,$doctor259: String!,$doctor260: String!,$doctor261: String!,$doctor262: String!,$doctor263: String!,$doctor264: String!,$doctor265: String!,$doctor266: String!,$doctor267: String!,$doctor268: String!,$doctor269: String!,$doctor270: String!,$doctor271: String!,$doctor272: String!,$doctor273: String!,$doctor274: String!,$doctor275: String!,$doctor276: String!,$doctor277: String!,$doctor278: String!,$doctor279: String!,$doctor280: String!,$doctor281: String!,$doctor282: String!,$doctor283: String!,$doctor284: String!,$doctor285: String!,$doctor286: String!,$doctor287: String!,$doctor288: String!,$doctor289: String!,$doctor290: String!,$doctor291: String!,$doctor292: String!,$doctor293: String!,$doctor294: String!,$doctor295: String!,$doctor296: String!,$doctor297: String!,$doctor298: String!,$doctor299: String!,$doctor300: String!,$doctor301: String!,$doctor302: String!,$doctor303: String!,$doctor304: String!,$doctor305: String!,$doctor306: String!,$doctor307: String!,$doctor308: String!,$doctor309: String!,$doctor310: String!,$doctor311: String!,$doctor312: String!,$doctor313: String!,$doctor314: String!,$doctor315: String!,$doctor316: String!,$doctor317: String!,$doctor318: String!,$doctor319: String!,$doctor320: String!,$doctor321: String!,$doctor322: String!,$doctor323: String!,$doctor324: String!,$doctor325: String!,$doctor326: String!,$doctor327: String!,$doctor328: String!,$doctor329: String!,$doctor330: String!,$doctor331: String!,$doctor332: String!,$doctor333: String!,$doctor334: String!,$doctor335: String!,$doctor336: String!,$doctor337: String!,$doctor338: String!,$doctor339: String!,$doctor340: String!,$doctor341: String!,$doctor342: String!,$doctor343: String!,$doctor344: String!,$doctor345: String!,$doctor346: String!,$doctor347: String!,$doctor348: String!,$doctor349: String!,$doctor350: String!,$doctor351: String!,$doctor352: String!,$doctor353: String!,$doctor354: String!,$doctor355: String!,$doctor356: String!,$doctor357: String!,$doctor358: String!,$doctor359: String!,$doctor360: String!,$doctor361: String!,$doctor362: String!,$doctor363: String!,$doctor364: String!,$doctor365: String!,$doctor366: String!,$doctor367: String!,$doctor368: String!,$doctor369: String!,$doctor370: String!,$doctor371: String!,$doctor372: String!,$doctor373: String!,$doctor374: String!,$doctor375: String!,$doctor376: String!,$doctor377: String!,$doctor378: String!,$doctor379: String!,$doctor380: String!,$doctor381: String!,$doctor382: String!,$doctor383: String!,$doctor384: String!,$doctor385: String!,$doctor386: String!,$doctor387: String!,$doctor388: String!,$doctor389: String!,$doctor390: String!,$doctor391: String!,$doctor392: String!,$doctor393: String!,$doctor394: String!,$doctor395: String!,$doctor396: String!,$doctor397: String!,$doctor398: String!,$doctor399: String!,$doctor400: String!,$doctor401: String!,$doctor402: String!,$doctor403: String!,$doctor404: String!,$doctor405: String!,$doctor406: String!,$doctor407: String!,$doctor408: String!,$doctor409: String!,$doctor410: String!,$doctor411: String!,$doctor412: String!,$doctor413: String!,$doctor414: String!,$doctor415: String!,$doctor416: String!,$doctor417: String!,$doctor418: String!,$doctor419: String!,$doctor420: String!,$doctor421: String!,$doctor422: String!,$doctor423: String!,$doctor424: String!,$doctor425: String!,$doctor426: String!,$doctor427: String!,$doctor428: String!,$doctor429: String!,$doctor430: String!,$doctor431: String!,$doctor432: String!,$doctor433: String!,$doctor434: String!,$doctor435: String!,$doctor436: String!,$doctor437: String!,$doctor438: String!,$doctor439: String!,$doctor440: String!,$doctor441: String!,$doctor442: String!,$doctor443: String!,$doctor444: String!,$doctor445: String!,$doctor446: String!,$doctor447: String!,$doctor448: String!,$doctor449: String!,$doctor450: String!,$doctor451: String!,$doctor452: String!,$doctor453: String!,$doctor454: String!,$doctor455: String!,$doctor456: String!,$doctor457: String!,$doctor458: String!,$doctor459: String!,$doctor460: String!,$doctor461: String!,$doctor462: String!,$doctor463: String!,$doctor464: String!,$doctor465: String!,$doctor466: String!,$doctor467: String!,$doctor468: String!,$doctor469: String!,$doctor470: String!,$doctor471: String!,$doctor472: String!,$doctor473: String!,$doctor474: String!,$doctor475: String!,$doctor476: String!,$doctor477: String!,$doctor478: String!,$doctor479: String!,$doctor480: String!,$doctor481: String!,$doctor482: String!,$doctor483: String!,$doctor484: String!,$doctor485: String!,$doctor486: String!,$doctor487: String!,$doctor488: String!,$doctor489: String!,$doctor490: String!,$doctor491: String!,$doctor492: String!,$doctor493: String!,$doctor494: String!,$doctor495: String!,$doctor496: String!,$doctor497: String!,$doctor498: String!,$doctor499: String!,$doctor500: String!,$doctor501: String!,$doctor502: String!,$doctor503: String!,$doctor504: String!,$doctor505: String!,$doctor506: String!,$doctor507: String!,$doctor508: String!,$doctor509: String!,$doctor510: String!,$doctor511: String!,$doctor512: String!,$doctor513: String!,$doctor514: String!,$doctor515: String!,$doctor516: String!,$doctor517: String!,$doctor518: String!,$doctor519: String!,$doctor520: String!,$doctor521: String!,$doctor522: String!,$doctor523: String!,$doctor524: String!,$doctor525: String!,$doctor526: String!,$doctor527: String!,$doctor528: String!,$doctor529: String!,$doctor530: String!,$doctor531: String!,$doctor532: String!,$doctor533: String!,$doctor534: String!,$doctor535: String!,$doctor536: String!,$doctor537: String!,$doctor538: String!,$doctor539: String!,$doctor540: String!,$doctor541: String!,$doctor542: String!,$doctor543: String!,$doctor544: String!,$doctor545: String!,$doctor546: String!,$doctor547: String!,$doctor548: String!,$doctor549: String!,$doctor550: String!,$doctor551: String!,$doctor552: String!,$doctor553: String!,$doctor554: String!,$doctor555: String!,$doctor556: String!,$doctor557: String!,$doctor558: String!,$doctor559: String!,$doctor560: String!,$doctor561: String!,$doctor562: String!,$doctor563: String!,$doctor564: String!,$doctor565: String!,$doctor566: String!,$doctor567: String!,$doctor568: String!,$doctor569: String!,$doctor570: String!,$doctor571: String!,$doctor572: String!,$doctor573: String!,$doctor574: String!,$doctor575: String!,$doctor576: String!,$doctor577: String!,$doctor578: String!,$doctor579: String!
+) {
+ Q0: patients(doctor: $doctor0) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q1: patients(doctor: $doctor1) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q2: patients(doctor: $doctor2) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q3: patients(doctor: $doctor3) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q4: patients(doctor: $doctor4) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q5: patients(doctor: $doctor5) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q6: patients(doctor: $doctor6) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q7: patients(doctor: $doctor7) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q8: patients(doctor: $doctor8) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q9: patients(doctor: $doctor9) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q10: patients(doctor: $doctor10) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q11: patients(doctor: $doctor11) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q12: patients(doctor: $doctor12) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q13: patients(doctor: $doctor13) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q14: patients(doctor: $doctor14) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q15: patients(doctor: $doctor15) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q16: patients(doctor: $doctor16) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q17: patients(doctor: $doctor17) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q18: patients(doctor: $doctor18) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q19: patients(doctor: $doctor19) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q20: patients(doctor: $doctor20) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q21: patients(doctor: $doctor21) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q22: patients(doctor: $doctor22) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q23: patients(doctor: $doctor23) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q24: patients(doctor: $doctor24) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q25: patients(doctor: $doctor25) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q26: patients(doctor: $doctor26) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q27: patients(doctor: $doctor27) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q28: patients(doctor: $doctor28) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q29: patients(doctor: $doctor29) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q30: patients(doctor: $doctor30) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q31: patients(doctor: $doctor31) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q32: patients(doctor: $doctor32) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q33: patients(doctor: $doctor33) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q34: patients(doctor: $doctor34) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q35: patients(doctor: $doctor35) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q36: patients(doctor: $doctor36) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q37: patients(doctor: $doctor37) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q38: patients(doctor: $doctor38) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q39: patients(doctor: $doctor39) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q40: patients(doctor: $doctor40) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q41: patients(doctor: $doctor41) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q42: patients(doctor: $doctor42) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q43: patients(doctor: $doctor43) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q44: patients(doctor: $doctor44) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q45: patients(doctor: $doctor45) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q46: patients(doctor: $doctor46) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q47: patients(doctor: $doctor47) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q48: patients(doctor: $doctor48) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q49: patients(doctor: $doctor49) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q50: patients(doctor: $doctor50) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q51: patients(doctor: $doctor51) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q52: patients(doctor: $doctor52) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q53: patients(doctor: $doctor53) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q54: patients(doctor: $doctor54) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q55: patients(doctor: $doctor55) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q56: patients(doctor: $doctor56) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q57: patients(doctor: $doctor57) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q58: patients(doctor: $doctor58) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q59: patients(doctor: $doctor59) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q60: patients(doctor: $doctor60) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q61: patients(doctor: $doctor61) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q62: patients(doctor: $doctor62) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q63: patients(doctor: $doctor63) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q64: patients(doctor: $doctor64) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q65: patients(doctor: $doctor65) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q66: patients(doctor: $doctor66) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q67: patients(doctor: $doctor67) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q68: patients(doctor: $doctor68) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q69: patients(doctor: $doctor69) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q70: patients(doctor: $doctor70) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q71: patients(doctor: $doctor71) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q72: patients(doctor: $doctor72) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q73: patients(doctor: $doctor73) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q74: patients(doctor: $doctor74) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q75: patients(doctor: $doctor75) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q76: patients(doctor: $doctor76) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q77: patients(doctor: $doctor77) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q78: patients(doctor: $doctor78) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q79: patients(doctor: $doctor79) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q80: patients(doctor: $doctor80) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q81: patients(doctor: $doctor81) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q82: patients(doctor: $doctor82) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q83: patients(doctor: $doctor83) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q84: patients(doctor: $doctor84) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q85: patients(doctor: $doctor85) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q86: patients(doctor: $doctor86) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q87: patients(doctor: $doctor87) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q88: patients(doctor: $doctor88) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q89: patients(doctor: $doctor89) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q90: patients(doctor: $doctor90) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q91: patients(doctor: $doctor91) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q92: patients(doctor: $doctor92) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q93: patients(doctor: $doctor93) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q94: patients(doctor: $doctor94) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q95: patients(doctor: $doctor95) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q96: patients(doctor: $doctor96) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q97: patients(doctor: $doctor97) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q98: patients(doctor: $doctor98) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q99: patients(doctor: $doctor99) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q100: patients(doctor: $doctor100) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q101: patients(doctor: $doctor101) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q102: patients(doctor: $doctor102) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q103: patients(doctor: $doctor103) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q104: patients(doctor: $doctor104) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q105: patients(doctor: $doctor105) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q106: patients(doctor: $doctor106) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q107: patients(doctor: $doctor107) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q108: patients(doctor: $doctor108) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q109: patients(doctor: $doctor109) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q110: patients(doctor: $doctor110) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q111: patients(doctor: $doctor111) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q112: patients(doctor: $doctor112) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q113: patients(doctor: $doctor113) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q114: patients(doctor: $doctor114) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q115: patients(doctor: $doctor115) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q116: patients(doctor: $doctor116) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q117: patients(doctor: $doctor117) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q118: patients(doctor: $doctor118) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q119: patients(doctor: $doctor119) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q120: patients(doctor: $doctor120) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q121: patients(doctor: $doctor121) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q122: patients(doctor: $doctor122) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q123: patients(doctor: $doctor123) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q124: patients(doctor: $doctor124) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q125: patients(doctor: $doctor125) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q126: patients(doctor: $doctor126) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q127: patients(doctor: $doctor127) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q128: patients(doctor: $doctor128) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q129: patients(doctor: $doctor129) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q130: patients(doctor: $doctor130) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q131: patients(doctor: $doctor131) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q132: patients(doctor: $doctor132) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q133: patients(doctor: $doctor133) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q134: patients(doctor: $doctor134) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q135: patients(doctor: $doctor135) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q136: patients(doctor: $doctor136) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q137: patients(doctor: $doctor137) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q138: patients(doctor: $doctor138) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q139: patients(doctor: $doctor139) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q140: patients(doctor: $doctor140) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q141: patients(doctor: $doctor141) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q142: patients(doctor: $doctor142) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q143: patients(doctor: $doctor143) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q144: patients(doctor: $doctor144) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q145: patients(doctor: $doctor145) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q146: patients(doctor: $doctor146) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q147: patients(doctor: $doctor147) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q148: patients(doctor: $doctor148) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q149: patients(doctor: $doctor149) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q150: patients(doctor: $doctor150) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q151: patients(doctor: $doctor151) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q152: patients(doctor: $doctor152) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q153: patients(doctor: $doctor153) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q154: patients(doctor: $doctor154) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q155: patients(doctor: $doctor155) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q156: patients(doctor: $doctor156) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q157: patients(doctor: $doctor157) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q158: patients(doctor: $doctor158) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q159: patients(doctor: $doctor159) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q160: patients(doctor: $doctor160) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q161: patients(doctor: $doctor161) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q162: patients(doctor: $doctor162) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q163: patients(doctor: $doctor163) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q164: patients(doctor: $doctor164) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q165: patients(doctor: $doctor165) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q166: patients(doctor: $doctor166) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q167: patients(doctor: $doctor167) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q168: patients(doctor: $doctor168) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q169: patients(doctor: $doctor169) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q170: patients(doctor: $doctor170) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q171: patients(doctor: $doctor171) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q172: patients(doctor: $doctor172) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q173: patients(doctor: $doctor173) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q174: patients(doctor: $doctor174) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q175: patients(doctor: $doctor175) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q176: patients(doctor: $doctor176) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q177: patients(doctor: $doctor177) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q178: patients(doctor: $doctor178) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q179: patients(doctor: $doctor179) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q180: patients(doctor: $doctor180) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q181: patients(doctor: $doctor181) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q182: patients(doctor: $doctor182) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q183: patients(doctor: $doctor183) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q184: patients(doctor: $doctor184) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q185: patients(doctor: $doctor185) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q186: patients(doctor: $doctor186) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q187: patients(doctor: $doctor187) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q188: patients(doctor: $doctor188) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q189: patients(doctor: $doctor189) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q190: patients(doctor: $doctor190) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q191: patients(doctor: $doctor191) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q192: patients(doctor: $doctor192) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q193: patients(doctor: $doctor193) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q194: patients(doctor: $doctor194) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q195: patients(doctor: $doctor195) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q196: patients(doctor: $doctor196) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q197: patients(doctor: $doctor197) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q198: patients(doctor: $doctor198) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q199: patients(doctor: $doctor199) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q200: patients(doctor: $doctor200) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q201: patients(doctor: $doctor201) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q202: patients(doctor: $doctor202) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q203: patients(doctor: $doctor203) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q204: patients(doctor: $doctor204) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q205: patients(doctor: $doctor205) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q206: patients(doctor: $doctor206) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q207: patients(doctor: $doctor207) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q208: patients(doctor: $doctor208) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q209: patients(doctor: $doctor209) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q210: patients(doctor: $doctor210) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q211: patients(doctor: $doctor211) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q212: patients(doctor: $doctor212) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q213: patients(doctor: $doctor213) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q214: patients(doctor: $doctor214) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q215: patients(doctor: $doctor215) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q216: patients(doctor: $doctor216) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q217: patients(doctor: $doctor217) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q218: patients(doctor: $doctor218) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q219: patients(doctor: $doctor219) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q220: patients(doctor: $doctor220) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q221: patients(doctor: $doctor221) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q222: patients(doctor: $doctor222) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q223: patients(doctor: $doctor223) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q224: patients(doctor: $doctor224) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q225: patients(doctor: $doctor225) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q226: patients(doctor: $doctor226) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q227: patients(doctor: $doctor227) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q228: patients(doctor: $doctor228) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q229: patients(doctor: $doctor229) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q230: patients(doctor: $doctor230) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q231: patients(doctor: $doctor231) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q232: patients(doctor: $doctor232) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q233: patients(doctor: $doctor233) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q234: patients(doctor: $doctor234) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q235: patients(doctor: $doctor235) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q236: patients(doctor: $doctor236) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q237: patients(doctor: $doctor237) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q238: patients(doctor: $doctor238) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q239: patients(doctor: $doctor239) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q240: patients(doctor: $doctor240) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q241: patients(doctor: $doctor241) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q242: patients(doctor: $doctor242) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q243: patients(doctor: $doctor243) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q244: patients(doctor: $doctor244) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q245: patients(doctor: $doctor245) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q246: patients(doctor: $doctor246) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q247: patients(doctor: $doctor247) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q248: patients(doctor: $doctor248) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q249: patients(doctor: $doctor249) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q250: patients(doctor: $doctor250) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q251: patients(doctor: $doctor251) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q252: patients(doctor: $doctor252) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q253: patients(doctor: $doctor253) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q254: patients(doctor: $doctor254) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q255: patients(doctor: $doctor255) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q256: patients(doctor: $doctor256) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q257: patients(doctor: $doctor257) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q258: patients(doctor: $doctor258) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q259: patients(doctor: $doctor259) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q260: patients(doctor: $doctor260) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q261: patients(doctor: $doctor261) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q262: patients(doctor: $doctor262) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q263: patients(doctor: $doctor263) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q264: patients(doctor: $doctor264) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q265: patients(doctor: $doctor265) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q266: patients(doctor: $doctor266) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q267: patients(doctor: $doctor267) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q268: patients(doctor: $doctor268) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q269: patients(doctor: $doctor269) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q270: patients(doctor: $doctor270) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q271: patients(doctor: $doctor271) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q272: patients(doctor: $doctor272) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q273: patients(doctor: $doctor273) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q274: patients(doctor: $doctor274) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q275: patients(doctor: $doctor275) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q276: patients(doctor: $doctor276) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q277: patients(doctor: $doctor277) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q278: patients(doctor: $doctor278) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q279: patients(doctor: $doctor279) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q280: patients(doctor: $doctor280) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q281: patients(doctor: $doctor281) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q282: patients(doctor: $doctor282) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q283: patients(doctor: $doctor283) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q284: patients(doctor: $doctor284) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q285: patients(doctor: $doctor285) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q286: patients(doctor: $doctor286) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q287: patients(doctor: $doctor287) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q288: patients(doctor: $doctor288) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q289: patients(doctor: $doctor289) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q290: patients(doctor: $doctor290) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q291: patients(doctor: $doctor291) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q292: patients(doctor: $doctor292) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q293: patients(doctor: $doctor293) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q294: patients(doctor: $doctor294) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q295: patients(doctor: $doctor295) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q296: patients(doctor: $doctor296) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q297: patients(doctor: $doctor297) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q298: patients(doctor: $doctor298) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q299: patients(doctor: $doctor299) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q300: patients(doctor: $doctor300) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q301: patients(doctor: $doctor301) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q302: patients(doctor: $doctor302) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q303: patients(doctor: $doctor303) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q304: patients(doctor: $doctor304) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q305: patients(doctor: $doctor305) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q306: patients(doctor: $doctor306) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q307: patients(doctor: $doctor307) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q308: patients(doctor: $doctor308) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q309: patients(doctor: $doctor309) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q310: patients(doctor: $doctor310) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q311: patients(doctor: $doctor311) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q312: patients(doctor: $doctor312) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q313: patients(doctor: $doctor313) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q314: patients(doctor: $doctor314) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q315: patients(doctor: $doctor315) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q316: patients(doctor: $doctor316) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q317: patients(doctor: $doctor317) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q318: patients(doctor: $doctor318) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q319: patients(doctor: $doctor319) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q320: patients(doctor: $doctor320) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q321: patients(doctor: $doctor321) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q322: patients(doctor: $doctor322) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q323: patients(doctor: $doctor323) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q324: patients(doctor: $doctor324) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q325: patients(doctor: $doctor325) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q326: patients(doctor: $doctor326) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q327: patients(doctor: $doctor327) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q328: patients(doctor: $doctor328) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q329: patients(doctor: $doctor329) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q330: patients(doctor: $doctor330) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q331: patients(doctor: $doctor331) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q332: patients(doctor: $doctor332) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q333: patients(doctor: $doctor333) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q334: patients(doctor: $doctor334) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q335: patients(doctor: $doctor335) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q336: patients(doctor: $doctor336) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q337: patients(doctor: $doctor337) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q338: patients(doctor: $doctor338) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q339: patients(doctor: $doctor339) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q340: patients(doctor: $doctor340) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q341: patients(doctor: $doctor341) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q342: patients(doctor: $doctor342) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q343: patients(doctor: $doctor343) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q344: patients(doctor: $doctor344) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q345: patients(doctor: $doctor345) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q346: patients(doctor: $doctor346) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q347: patients(doctor: $doctor347) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q348: patients(doctor: $doctor348) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q349: patients(doctor: $doctor349) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q350: patients(doctor: $doctor350) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q351: patients(doctor: $doctor351) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q352: patients(doctor: $doctor352) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q353: patients(doctor: $doctor353) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q354: patients(doctor: $doctor354) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q355: patients(doctor: $doctor355) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q356: patients(doctor: $doctor356) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q357: patients(doctor: $doctor357) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q358: patients(doctor: $doctor358) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q359: patients(doctor: $doctor359) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q360: patients(doctor: $doctor360) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q361: patients(doctor: $doctor361) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q362: patients(doctor: $doctor362) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q363: patients(doctor: $doctor363) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q364: patients(doctor: $doctor364) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q365: patients(doctor: $doctor365) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q366: patients(doctor: $doctor366) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q367: patients(doctor: $doctor367) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q368: patients(doctor: $doctor368) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q369: patients(doctor: $doctor369) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q370: patients(doctor: $doctor370) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q371: patients(doctor: $doctor371) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q372: patients(doctor: $doctor372) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q373: patients(doctor: $doctor373) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q374: patients(doctor: $doctor374) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q375: patients(doctor: $doctor375) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q376: patients(doctor: $doctor376) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q377: patients(doctor: $doctor377) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q378: patients(doctor: $doctor378) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q379: patients(doctor: $doctor379) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q380: patients(doctor: $doctor380) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q381: patients(doctor: $doctor381) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q382: patients(doctor: $doctor382) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q383: patients(doctor: $doctor383) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q384: patients(doctor: $doctor384) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q385: patients(doctor: $doctor385) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q386: patients(doctor: $doctor386) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q387: patients(doctor: $doctor387) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q388: patients(doctor: $doctor388) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q389: patients(doctor: $doctor389) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q390: patients(doctor: $doctor390) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q391: patients(doctor: $doctor391) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q392: patients(doctor: $doctor392) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q393: patients(doctor: $doctor393) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q394: patients(doctor: $doctor394) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q395: patients(doctor: $doctor395) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q396: patients(doctor: $doctor396) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q397: patients(doctor: $doctor397) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q398: patients(doctor: $doctor398) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q399: patients(doctor: $doctor399) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q400: patients(doctor: $doctor400) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q401: patients(doctor: $doctor401) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q402: patients(doctor: $doctor402) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q403: patients(doctor: $doctor403) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q404: patients(doctor: $doctor404) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q405: patients(doctor: $doctor405) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q406: patients(doctor: $doctor406) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q407: patients(doctor: $doctor407) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q408: patients(doctor: $doctor408) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q409: patients(doctor: $doctor409) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q410: patients(doctor: $doctor410) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q411: patients(doctor: $doctor411) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q412: patients(doctor: $doctor412) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q413: patients(doctor: $doctor413) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q414: patients(doctor: $doctor414) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q415: patients(doctor: $doctor415) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q416: patients(doctor: $doctor416) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q417: patients(doctor: $doctor417) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q418: patients(doctor: $doctor418) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q419: patients(doctor: $doctor419) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q420: patients(doctor: $doctor420) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q421: patients(doctor: $doctor421) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q422: patients(doctor: $doctor422) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q423: patients(doctor: $doctor423) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q424: patients(doctor: $doctor424) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q425: patients(doctor: $doctor425) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q426: patients(doctor: $doctor426) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q427: patients(doctor: $doctor427) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q428: patients(doctor: $doctor428) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q429: patients(doctor: $doctor429) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q430: patients(doctor: $doctor430) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q431: patients(doctor: $doctor431) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q432: patients(doctor: $doctor432) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q433: patients(doctor: $doctor433) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q434: patients(doctor: $doctor434) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q435: patients(doctor: $doctor435) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q436: patients(doctor: $doctor436) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q437: patients(doctor: $doctor437) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q438: patients(doctor: $doctor438) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q439: patients(doctor: $doctor439) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q440: patients(doctor: $doctor440) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q441: patients(doctor: $doctor441) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q442: patients(doctor: $doctor442) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q443: patients(doctor: $doctor443) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q444: patients(doctor: $doctor444) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q445: patients(doctor: $doctor445) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q446: patients(doctor: $doctor446) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q447: patients(doctor: $doctor447) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q448: patients(doctor: $doctor448) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q449: patients(doctor: $doctor449) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q450: patients(doctor: $doctor450) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q451: patients(doctor: $doctor451) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q452: patients(doctor: $doctor452) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q453: patients(doctor: $doctor453) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q454: patients(doctor: $doctor454) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q455: patients(doctor: $doctor455) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q456: patients(doctor: $doctor456) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q457: patients(doctor: $doctor457) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q458: patients(doctor: $doctor458) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q459: patients(doctor: $doctor459) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q460: patients(doctor: $doctor460) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q461: patients(doctor: $doctor461) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q462: patients(doctor: $doctor462) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q463: patients(doctor: $doctor463) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q464: patients(doctor: $doctor464) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q465: patients(doctor: $doctor465) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q466: patients(doctor: $doctor466) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q467: patients(doctor: $doctor467) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q468: patients(doctor: $doctor468) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q469: patients(doctor: $doctor469) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q470: patients(doctor: $doctor470) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q471: patients(doctor: $doctor471) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q472: patients(doctor: $doctor472) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q473: patients(doctor: $doctor473) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q474: patients(doctor: $doctor474) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q475: patients(doctor: $doctor475) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q476: patients(doctor: $doctor476) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q477: patients(doctor: $doctor477) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q478: patients(doctor: $doctor478) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q479: patients(doctor: $doctor479) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q480: patients(doctor: $doctor480) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q481: patients(doctor: $doctor481) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q482: patients(doctor: $doctor482) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q483: patients(doctor: $doctor483) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q484: patients(doctor: $doctor484) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q485: patients(doctor: $doctor485) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q486: patients(doctor: $doctor486) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q487: patients(doctor: $doctor487) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q488: patients(doctor: $doctor488) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q489: patients(doctor: $doctor489) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q490: patients(doctor: $doctor490) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q491: patients(doctor: $doctor491) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q492: patients(doctor: $doctor492) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q493: patients(doctor: $doctor493) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q494: patients(doctor: $doctor494) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q495: patients(doctor: $doctor495) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q496: patients(doctor: $doctor496) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q497: patients(doctor: $doctor497) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q498: patients(doctor: $doctor498) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q499: patients(doctor: $doctor499) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q500: patients(doctor: $doctor500) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q501: patients(doctor: $doctor501) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q502: patients(doctor: $doctor502) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q503: patients(doctor: $doctor503) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q504: patients(doctor: $doctor504) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q505: patients(doctor: $doctor505) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q506: patients(doctor: $doctor506) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q507: patients(doctor: $doctor507) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q508: patients(doctor: $doctor508) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q509: patients(doctor: $doctor509) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q510: patients(doctor: $doctor510) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q511: patients(doctor: $doctor511) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q512: patients(doctor: $doctor512) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q513: patients(doctor: $doctor513) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q514: patients(doctor: $doctor514) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q515: patients(doctor: $doctor515) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q516: patients(doctor: $doctor516) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q517: patients(doctor: $doctor517) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q518: patients(doctor: $doctor518) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q519: patients(doctor: $doctor519) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q520: patients(doctor: $doctor520) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q521: patients(doctor: $doctor521) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q522: patients(doctor: $doctor522) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q523: patients(doctor: $doctor523) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q524: patients(doctor: $doctor524) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q525: patients(doctor: $doctor525) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q526: patients(doctor: $doctor526) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q527: patients(doctor: $doctor527) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q528: patients(doctor: $doctor528) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q529: patients(doctor: $doctor529) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q530: patients(doctor: $doctor530) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q531: patients(doctor: $doctor531) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q532: patients(doctor: $doctor532) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q533: patients(doctor: $doctor533) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q534: patients(doctor: $doctor534) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q535: patients(doctor: $doctor535) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q536: patients(doctor: $doctor536) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q537: patients(doctor: $doctor537) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q538: patients(doctor: $doctor538) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q539: patients(doctor: $doctor539) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q540: patients(doctor: $doctor540) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q541: patients(doctor: $doctor541) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q542: patients(doctor: $doctor542) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q543: patients(doctor: $doctor543) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q544: patients(doctor: $doctor544) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q545: patients(doctor: $doctor545) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q546: patients(doctor: $doctor546) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q547: patients(doctor: $doctor547) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q548: patients(doctor: $doctor548) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q549: patients(doctor: $doctor549) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q550: patients(doctor: $doctor550) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q551: patients(doctor: $doctor551) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q552: patients(doctor: $doctor552) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q553: patients(doctor: $doctor553) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q554: patients(doctor: $doctor554) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q555: patients(doctor: $doctor555) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q556: patients(doctor: $doctor556) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q557: patients(doctor: $doctor557) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q558: patients(doctor: $doctor558) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q559: patients(doctor: $doctor559) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q560: patients(doctor: $doctor560) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q561: patients(doctor: $doctor561) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q562: patients(doctor: $doctor562) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q563: patients(doctor: $doctor563) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q564: patients(doctor: $doctor564) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q565: patients(doctor: $doctor565) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q566: patients(doctor: $doctor566) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q567: patients(doctor: $doctor567) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q568: patients(doctor: $doctor568) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q569: patients(doctor: $doctor569) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q570: patients(doctor: $doctor570) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q571: patients(doctor: $doctor571) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q572: patients(doctor: $doctor572) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q573: patients(doctor: $doctor573) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q574: patients(doctor: $doctor574) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q575: patients(doctor: $doctor575) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q576: patients(doctor: $doctor576) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q577: patients(doctor: $doctor577) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q578: patients(doctor: $doctor578) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+ Q579: patients(doctor: $doctor579) {
+  name, medical_record {
+ age,weight,sex,diabetes,recent_heart_events,current_health_assessment } 
+}
+}

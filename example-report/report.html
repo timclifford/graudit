@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://newcss.net/theme/terminal.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/report.css"/>
+  </head>
+  <body>
+    <div>
+      <h1>Report</h1>
+      <p>Results from the scan on: <a href="http://localhost:8000/graphql">http://localhost:8000/graphql</a></p>
+      
+        <details>
+          <summary>HTTP headers</summary><pre>access-control-allow-credentials: true</pre><pre>access-control-allow-origin: http://localhost:3000</pre><pre>connection: keep-alive</pre><pre>content-length: 18</pre><pre>content-type: text/html; charset=utf-8</pre><pre>date: Sun, 19 Sep 2021 15:12:20 GMT</pre><pre>etag: W/"12-7JEJwpG8g89ii7CR/6hhfN27Q+k"</pre><pre>keep-alive: timeout=5</pre><pre>vary: Origin</pre><pre>x-powered-by: Express</pre>
+        </details>
+
+      <blockquote>
+        <h3>Summary</h3>
+        <p>Passes: 0</p>
+        <p>Warnings: 3</p>
+        <p>Fails: 6</p>
+      </blockquote>
+
+      <div>
+        <table class="results">
+          <thead class="table-head">
+            <tr>
+              <th class="text-left">Check</th>
+              <th class="text-left">Result</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr>
+        <td>introspection</td>
+        <td>FAIL</td>
+      </tr><tr>
+        <td>ssl_check</td>
+        <td>FAIL</td>
+      </tr><tr>
+        <td>sensitive_fields</td>
+        <td>WARNING</td>
+      </tr><tr>
+        <td>brute_forceable_mutations</td>
+        <td>WARNING</td>
+      </tr><tr>
+        <td>nested_queries</td>
+        <td>FAIL</td>
+      </tr><tr>
+        <td>string_inputs</td>
+        <td>FAIL</td>
+      </tr><tr>
+        <td>graphql_consoles</td>
+        <td>WARNING</td>
+      </tr><tr>
+        <td>nullable_types</td>
+        <td>FAIL</td>
+      </tr><tr>
+        <td>json_inputs</td>
+        <td>FAIL</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>SSL/HTTPS Check</h2>
+      <p>Check whether the endpoint is using secure TLS</p>
+      <pre>FAIL</pre>
+
+      <h2>Nested queries</h2>
+      <div class="collapse-list"><details>
+          <summary>patient</summary>
+          <pre>{"patient.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patient.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patient.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-0-0"></div><pre>{"patient.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patient.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patient.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-0-1"></div>
+        </details><details>
+          <summary>notes</summary>
+          <pre>{"notes.Patient._fields.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""notes.Patient._fields.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""notes.Patient._fields.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object""notes.Patient._fields.medical_record.type._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""notes.Patient._fields.medical_record.type._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""notes.Patient._fields.medical_record.type._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-1-0"></div>
+        </details><details>
+          <summary>appointments</summary>
+          <pre>{"appointments.Patient._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""appointments.Patient._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""appointments.Patient._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-5-0"></div>
+        </details><details>
+          <summary>appointment</summary>
+          <pre>{"appointment.Patient._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""appointment.Patient._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""appointment.Patient._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-6-0"></div>
+        </details><details>
+          <summary>patientsDirectory</summary>
+          <pre>{"patientsDirectory.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patientsDirectory.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patientsDirectory.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-9-0"></div><pre>{"patientsDirectory.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patientsDirectory.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patientsDirectory.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-9-1"></div>
+        </details><details>
+          <summary>patients</summary>
+          <pre>{"patients.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patients.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patients.Appointment._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-10-0"></div><pre>{"patients.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.patient.type.[object Object].warning":"Deeply nested or cyclical object""patients.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.doctor.type.ID.warning":"Deeply nested or cyclical object""patients.MedicalRecord._fields.patient.type.appointments.type._fields.patient.type._fields.appointments.type.patient.type.appointments.type.booked_by.type.ID.warning":"Deeply nested or cyclical object"}</pre>
+              <div id="results-10-1"></div>
+        </details></div>
+      <p>Mitigation: Heavily nested fields were found in some queries. It is recommended that you revise these queries to add complexity analysis and query depth limiting.</p>
+
+      <h2>Introspection check</h2>
+      <p>GraphQL is introspective which allows its schema to be self-documenting if enabled. The risk here is that it may leak sensitive information which was intended to remain private.</p>
+      <pre>Introspection found</pre>
+
+      <h2>Sensitive/Personal data check</h2>
+      <p>You may want to check the following sensitive or PII that has been discovered. They may have ended up in certain query responses unexpectedly due to access control/permission misconfigurations.</p>
+      <details>
+          <summary>appointment.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>patients.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>patientsDirectory.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>me.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>notes.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>user.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>doctors.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>users.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>appointments.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>patient.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>addMedicalRecord.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>addPatient.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>postNote.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>updateMedicalRecord.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>addAppointment.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>updateUser.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>signupUser.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre><pre>"token"</pre>
+        </details><details>
+          <summary>signinUser.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre><pre>"token"</pre>
+        </details><details>
+          <summary>resetPassword.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>updateAppointment.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre>
+        </details><details>
+          <summary>updatePatient.gql</summary>
+          <pre>"recent_heart_events"</pre>
+        </details><details>
+          <summary>addUser.gql</summary>
+          <pre>"password"</pre><pre>"pass"</pre><pre>"token"</pre>
+        </details>
+
+      <h2>Brute-forceable Mutations</h3>
+      <p>These mutations could be vulnerable to batch-querying brute-force attacks</p>
+      <pre>[
+  "signinUser"
+]</pre><pre>[
+  "resetPassword"
+]</pre>
+      
+      <h2>Graphql consoles found</h2>
+      <details>
+          <summary>http://localhost:8000/graphql</summary>
+          <pre>{
+  "status": 400
+  "path": "http://localhost:8000/graphql"
+  "statusText": "Bad Request"
+}</pre>
+        </details><details>
+          <summary>http://localhost:8000/playground</summary>
+          <pre>{
+  "status": 200
+  "path": "http://localhost:8000/playground"
+  "statusText": "OK"
+}</pre>
+        </details><details>
+          <summary>http://localhost:8000/graphql/console</summary>
+          <pre>{
+  "status": 400
+  "path": "http://localhost:8000/graphql/console"
+  "statusText": "Bad Request"
+}</pre>
+        </details>
+
+      <h2>JSON inputs</h2>
+      <p>JSON input arguments in queries are typically prone to SQL/NoSQL attacks if left unsanitised. Please check you have properly santised these inputs.</p>
+      <details>
+          <summary>Query: patients</summary>
+          <pre>{
+  "query": "patients"
+  "arg_name": "search"
+  "arg_type": {
+    "kind": "SCALAR"
+    "name": "JSONObject"
+    "ofType": null
+  }
+  "query_type": "Query"
+}</pre>
+        </details>
+
+      <h2>Nullable types</h2>
+      <p></p>
+      <details>
+          <summary>Query: appointment</summary>
+          <pre>{
+  "query": "appointment"
+  "type": {
+    "kind": "OBJECT"
+    "name": "Appointment"
+    "ofType": null
+  }
+  "query_type": "Query"
+}</pre>
+        </details><details>
+          <summary>Query: appointments</summary>
+          <pre>{
+  "query": "appointments"
+  "type": {
+    "kind": "LIST"
+    "name": null
+    "ofType": {
+      "kind": "OBJECT"
+      "name": "Appointment"
+      "ofType": null
+    }
+  }
+  "query_type": "Query"
+}</pre>
+        </details><details>
+          <summary>Query: patient</summary>
+          <pre>{
+  "query": "patient"
+  "type": {
+    "kind": "OBJECT"
+    "name": "Patient"
+    "ofType": null
+  }
+  "query_type": "Query"
+}</pre>
+        </details><details>
+          <summary>Query: patientsDirectory</summary>
+          <pre>{
+  "query": "patientsDirectory"
+  "type": {
+    "kind": "LIST"
+    "name": null
+    "ofType": {
+      "kind": "OBJECT"
+      "name": "Patient"
+      "ofType": null
+    }
+  }
+  "query_type": "Query"
+}</pre>
+        </details><details>
+          <summary>Mutation: signinUser</summary>
+          <pre>{
+  "query": "signinUser"
+  "name": {
+    "kind": "OBJECT"
+    "name": "Auth"
+    "ofType": null
+  }
+  "query_type": "Mutation"
+}</pre>
+        </details><details>
+          <summary>Mutation: deleteUser</summary>
+          <pre>{
+  "query": "deleteUser"
+  "name": {
+    "kind": "SCALAR"
+    "name": "String"
+    "ofType": null
+  }
+  "query_type": "Mutation"
+}</pre>
+        </details><details>
+          <summary>Mutation: deletePatient</summary>
+          <pre>{
+  "query": "deletePatient"
+  "name": {
+    "kind": "SCALAR"
+    "name": "String"
+    "ofType": null
+  }
+  "query_type": "Mutation"
+}</pre>
+        </details><details>
+          <summary>Mutation: deleteAppointment</summary>
+          <pre>{
+  "query": "deleteAppointment"
+  "name": {
+    "kind": "SCALAR"
+    "name": "String"
+    "ofType": null
+  }
+  "query_type": "Mutation"
+}</pre>
+        </details>
+
+      <div>
+        <h2>String inputs</h2>
+        <details>
+          <summary>"_id" - ("user")</summary>
+            <pre>field: "user"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "_id"</pre>
+        </details><details>
+          <summary>"_id" - ("appointment")</summary>
+            <pre>field: "appointment"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "_id"</pre>
+        </details><details>
+          <summary>"name" - ("appointment")</summary>
+            <pre>field: "appointment"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "name"</pre>
+        </details><details>
+          <summary>"practice" - ("appointments")</summary>
+            <pre>field: "appointments"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"_id" - ("patient")</summary>
+            <pre>field: "patient"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "_id"</pre>
+        </details><details>
+          <summary>"name" - ("patient")</summary>
+            <pre>field: "patient"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "name"</pre>
+        </details><details>
+          <summary>"doctor" - ("patients")</summary>
+            <pre>field: "patients"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "doctor"</pre>
+        </details><details>
+          <summary>"practice" - ("patientsDirectory")</summary>
+            <pre>field: "patientsDirectory"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"patientId" - ("notes")</summary>
+            <pre>field: "notes"</pre>
+            <pre>query_type: "query"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "patientId"</pre>
+        </details><details>
+          <summary>"username" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "username"</pre>
+        </details><details>
+          <summary>"display_name" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "display_name"</pre>
+        </details><details>
+          <summary>"email" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "email"</pre>
+        </details><details>
+          <summary>"password" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "password"</pre>
+        </details><details>
+          <summary>"passwordConfirm" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "passwordConfirm"</pre>
+        </details><details>
+          <summary>"practice" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"roles" - ("signupUser")</summary>
+            <pre>field: "signupUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "[String!]!"</pre>
+            <pre>arg: "roles"</pre>
+        </details><details>
+          <summary>"email" - ("signinUser")</summary>
+            <pre>field: "signinUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "email"</pre>
+        </details><details>
+          <summary>"password" - ("signinUser")</summary>
+            <pre>field: "signinUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "password"</pre>
+        </details><details>
+          <summary>"email" - ("requestReset")</summary>
+            <pre>field: "requestReset"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "email"</pre>
+        </details><details>
+          <summary>"password" - ("resetPassword")</summary>
+            <pre>field: "resetPassword"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "password"</pre>
+        </details><details>
+          <summary>"passwordConfirm" - ("resetPassword")</summary>
+            <pre>field: "resetPassword"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "passwordConfirm"</pre>
+        </details><details>
+          <summary>"resetToken" - ("resetPassword")</summary>
+            <pre>field: "resetPassword"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "resetToken"</pre>
+        </details><details>
+          <summary>"username" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "username"</pre>
+        </details><details>
+          <summary>"display_name" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "display_name"</pre>
+        </details><details>
+          <summary>"email" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "email"</pre>
+        </details><details>
+          <summary>"password" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "password"</pre>
+        </details><details>
+          <summary>"practice" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"roles" - ("addUser")</summary>
+            <pre>field: "addUser"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "[String!]!"</pre>
+            <pre>arg: "roles"</pre>
+        </details><details>
+          <summary>"name" - ("addPractice")</summary>
+            <pre>field: "addPractice"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "name"</pre>
+        </details><details>
+          <summary>"address" - ("addPractice")</summary>
+            <pre>field: "addPractice"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "address"</pre>
+        </details><details>
+          <summary>"phone_number" - ("addPractice")</summary>
+            <pre>field: "addPractice"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "phone_number"</pre>
+        </details><details>
+          <summary>"name" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "name"</pre>
+        </details><details>
+          <summary>"address" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "address"</pre>
+        </details><details>
+          <summary>"phone_number" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "phone_number"</pre>
+        </details><details>
+          <summary>"practice" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"doctor" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "doctor"</pre>
+        </details><details>
+          <summary>"appointments" - ("addPatient")</summary>
+            <pre>field: "addPatient"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "[String]"</pre>
+            <pre>arg: "appointments"</pre>
+        </details><details>
+          <summary>"patient" - ("addMedicalRecord")</summary>
+            <pre>field: "addMedicalRecord"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "patient"</pre>
+        </details><details>
+          <summary>"sex" - ("addMedicalRecord")</summary>
+            <pre>field: "addMedicalRecord"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "sex"</pre>
+        </details><details>
+          <summary>"weight" - ("addMedicalRecord")</summary>
+            <pre>field: "addMedicalRecord"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "weight"</pre>
+        </details><details>
+          <summary>"patient" - ("postNote")</summary>
+            <pre>field: "postNote"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "patient"</pre>
+        </details><details>
+          <summary>"text" - ("postNote")</summary>
+            <pre>field: "postNote"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "text"</pre>
+        </details><details>
+          <summary>"date" - ("postNote")</summary>
+            <pre>field: "postNote"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "date"</pre>
+        </details><details>
+          <summary>"patient" - ("addAppointment")</summary>
+            <pre>field: "addAppointment"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "patient"</pre>
+        </details><details>
+          <summary>"date" - ("addAppointment")</summary>
+            <pre>field: "addAppointment"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String!"</pre>
+            <pre>arg: "date"</pre>
+        </details><details>
+          <summary>"booked_by" - ("addAppointment")</summary>
+            <pre>field: "addAppointment"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "booked_by"</pre>
+        </details><details>
+          <summary>"practice" - ("addAppointment")</summary>
+            <pre>field: "addAppointment"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "practice"</pre>
+        </details><details>
+          <summary>"doctor" - ("addAppointment")</summary>
+            <pre>field: "addAppointment"</pre>
+            <pre>query_type: "mutation"</pre>
+            <pre>type: "String"</pre>
+            <pre>arg: "doctor"</pre>
+        </details>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/renderjson@1.4.0/renderjson.min.js"></script>
+    <script>
+      document.getElementById("results-0-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patient","name":"Appointment","args":[],"fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}]));document.getElementById("results-0-1").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patient","name":"MedicalRecord","args":[],"fields":[{"name":"_id","description":"","args":[]},[[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}}]}},{"name":"doctor","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"appointments","description":"","args":[],"type":{"name":"Appointment","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]],{"name":"age","description":"","args":[],"type":"Int"},{"name":"weight","description":"","args":[],"type":"String"},{"name":"sex","description":"","args":[],"type":"String"},{"name":"recent_heart_events","description":"","args":[],"type":"Boolean"},{"name":"current_health_assessment","description":"","args":[],"type":"HealthRisk"},{"name":"diabetes","description":"","args":[],"type":"Boolean"},{"name":"crp","description":"","args":[],"type":"CRPStatus"},[[{"name":"_id","description":"","args":[]},{"name":"patient","description":"","args":[],"type":"Patient"},{"name":"text","description":"","args":[],"type":"String"},{"name":"date","description":"","args":[],"type":"String"},{"name":"sender","description":"","args":[],"type":"User"}]]]}]));document.getElementById("results-1-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"notes","name":"Patient","args":[],"fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}}]}},{"name":"doctor","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"appointments","description":"","args":[],"type":{"name":"Appointment","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}},{"name":"medical_record","description":"","args":[],"type":{"name":"MedicalRecord","_fields":[{"name":"_id","description":"","args":[]},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}}]}},{"name":"doctor","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"appointments","description":"","args":[],"type":{"name":"Appointment","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"age","description":"","args":[],"type":"Int"},{"name":"weight","description":"","args":[],"type":"String"},{"name":"sex","description":"","args":[],"type":"String"},{"name":"recent_heart_events","description":"","args":[],"type":"Boolean"},{"name":"current_health_assessment","description":"","args":[],"type":"HealthRisk"},{"name":"diabetes","description":"","args":[],"type":"Boolean"},{"name":"crp","description":"","args":[],"type":"CRPStatus"},{"name":"notes","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"patient","description":"","args":[],"type":"Patient"},{"name":"text","description":"","args":[],"type":"String"},{"name":"date","description":"","args":[],"type":"String"},{"name":"sender","description":"","args":[],"type":"User"}]}]}}]}]));document.getElementById("results-5-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"appointments","name":"Patient","args":[],"fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},[[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]],{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}]));document.getElementById("results-6-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"appointment","name":"Patient","args":[],"fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},[[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]],{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}]));document.getElementById("results-9-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patientsDirectory","name":"Appointment","args":[],"fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}]));document.getElementById("results-9-1").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patientsDirectory","name":"MedicalRecord","args":[],"fields":[{"name":"_id","description":"","args":[]},[[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}}]}},{"name":"doctor","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"appointments","description":"","args":[],"type":{"name":"Appointment","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]],{"name":"age","description":"","args":[],"type":"Int"},{"name":"weight","description":"","args":[],"type":"String"},{"name":"sex","description":"","args":[],"type":"String"},{"name":"recent_heart_events","description":"","args":[],"type":"Boolean"},{"name":"current_health_assessment","description":"","args":[],"type":"HealthRisk"},{"name":"diabetes","description":"","args":[],"type":"Boolean"},{"name":"crp","description":"","args":[],"type":"CRPStatus"},[[{"name":"_id","description":"","args":[]},{"name":"patient","description":"","args":[],"type":"Patient"},{"name":"text","description":"","args":[],"type":"String"},{"name":"date","description":"","args":[],"type":"String"},{"name":"sender","description":"","args":[],"type":"User"}]]]}]));document.getElementById("results-10-0").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patients","name":"Appointment","args":[],"fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}]));document.getElementById("results-10-1").appendChild(renderjson.set_icons('+', '-').set_show_to_level(4)([{"query":"patients","name":"MedicalRecord","args":[],"fields":[{"name":"_id","description":"","args":[]},[[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"name","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"address","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"phone_number","description":"","args":[],"type":{"name":"String","_fields":"String"}}]}},{"name":"doctor","description":"","args":[],"type":{"name":"String","_fields":"String"}},{"name":"appointments","description":"","args":[],"type":{"name":"Appointment","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}},{"name":"patient","description":"","args":[],"type":{"name":"Patient","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[],"type":"String"},{"name":"phone_number","description":"","args":[],"type":"String"},{"name":"practice","description":"","args":[],"type":"Practice"},{"name":"doctor","description":"","args":[],"type":"String"},{"name":"appointments","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":"ID"}},{"name":"patient","description":"","args":[],"type":[{},{"name":{"name":"name","description":"","type":{"name":"String","_fields":"String"},"args":[],"isDeprecated":false,"deprecationReason":null},"warning":"Deeply nested or cyclical object"},{},{}]},{"name":"doctor","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"practice","description":"","args":[]},{"name":"booked_by","description":"","args":[],"type":[{"name":"ID","warning":"Deeply nested or cyclical object"},{},{}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]},{"name":"doctor","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"practice","description":"","args":[],"type":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]},{"name":"booked_by","description":"","args":[],"type":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]},{"name":"date","description":"","args":[],"type":"String"}]},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]}},{"name":"doctor","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"booked_by","description":"","args":[],"type":{"name":"User","_fields":[{"name":"_id","description":"","args":[],"type":{"name":"ID","_fields":{"name":"ID","_fields":{"name":"ID","_fields":"ID"}}}},{"name":"username","description":"The user's username","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"display_name","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"email","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"password","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetToken","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"resetTokenExpiry","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":{"name":"String","_fields":"String"}}}},{"name":"practice","description":"","args":[],"type":{"name":"Practice","_fields":[{"name":"_id","description":"","args":[]},{"name":"name","description":"","args":[]},{"name":"address","description":"","args":[]},{"name":"phone_number","description":"","args":[]}]}},{"name":"roles","description":"","args":[],"type":{"_fields":[{},{},{"name":"serializeString"},{"name":"coerceString"},{"name":"parseLiteral"},{},{},{}]}}]}},{"name":"date","description":"","args":[],"type":{"name":"String","_fields":{"name":"String","_fields":"String"}}}]}},{"name":"medical_record","description":"","args":[],"type":"MedicalRecord"}]],{"name":"age","description":"","args":[],"type":"Int"},{"name":"weight","description":"","args":[],"type":"String"},{"name":"sex","description":"","args":[],"type":"String"},{"name":"recent_heart_events","description":"","args":[],"type":"Boolean"},{"name":"current_health_assessment","description":"","args":[],"type":"HealthRisk"},{"name":"diabetes","description":"","args":[],"type":"Boolean"},{"name":"crp","description":"","args":[],"type":"CRPStatus"},[[{"name":"_id","description":"","args":[]},{"name":"patient","description":"","args":[],"type":"Patient"},{"name":"text","description":"","args":[],"type":"String"},{"name":"date","description":"","args":[],"type":"String"},{"name":"sender","description":"","args":[],"type":"User"}]]]}]));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+mutation addAppointment($patient: String!, $date: String!, $booked_by: String, $practice: String, $doctor: String) {
+  addAppointment(patient: $patient, date: $date, booked_by: $booked_by, practice: $practice, doctor: $doctor) {
+    _id
+    patient {
+      _id
+      name
+      address
+      phone_number
+      practice
+      doctor
+      appointments
+      medical_record
+    }
+    doctor {
+      _id
+      username
+      display_name
+      email
+      password
+      resetToken
+      resetTokenExpiry
+      practice
+      roles
+    }
+    practice {
+      _id
+      name
+      address
+      phone_number
+    }
+    booked_by {
+      _id
+      username
+      display_name
+      email
+      password
+      resetToken
+      resetTokenExpiry
+      practice
+      roles
+    }
+    date
+  }
+}
