@@ -149,9 +149,9 @@ async function graudit() {
 
       let result: any;
       if (config) {
-        result = await scan(program.url, config?.access_token, program.verbose,  config?.headers || {});
+        result = await scan(program.url, config?.access_token ? config?.access_token : program.token, program.verbose,  config?.headers || {});
       } else {
-        result = await scan(program.url, "", program.verbose);
+        result = await scan(program.url, program.token, program.verbose);
       }
 
       if (program.format === "json") {
