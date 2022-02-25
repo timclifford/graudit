@@ -86,7 +86,7 @@ async function graudit() {
       if (config) {
         result = await build(
           program.url,
-          config.access_token || "",
+          config.access_token || program.token,
           depth,
           program.verbose,
           program.minimal,
@@ -95,7 +95,7 @@ async function graudit() {
       } else {
         result = await build(
           program.url,
-          "",
+          program.token,
           depth,
           program.verbose,
           program.minimal

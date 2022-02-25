@@ -153,7 +153,7 @@ export async function fetchIntrospection(
   }
   if (headers && verbose) {
     console.log('Headers added: ', headers);
-  }  
+  }
 
   let introspectionHeaders =  {
     "Content-Type": "application/json",
