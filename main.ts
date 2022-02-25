@@ -130,7 +130,7 @@ async function graudit() {
         program.mutation,
         program.variables,
         program.payload,
-        config ? config.access_token : "",
+        config.access_token != null ? config.access_token : program.token,
         program.output,
         program.verbose,
         program.format,

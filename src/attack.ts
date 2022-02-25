@@ -118,7 +118,7 @@ export async function attackQuery(
             }
           });
         }
-        
+
         // Run attack
         results = await runAttack(
           endpoint,
@@ -277,12 +277,18 @@ export const runAttack = async (
     const { data, errors } = json || null;
 
     if (errors) {
-      const extensions = errors?.map((e: any) => e.extensions);
+      const extensions = errors?.map((e: any) => e.extensions ? e.extensions : null);
 
       if (format !== "json") {
         console.log("Exception found: ", extensions.slice(0, 2));
       }
-      data.exception = { "exception_found": extensions.slice(0, 2) };
+
+      if (extensions[0] != null) {
+        data.exception = { "exception_found": extensions.slice(0, 2) };
+      }
+      else {
+        console.log(errors);
+      }
     }
 
     if (data) {
@@ -306,12 +312,12 @@ export const runAttack = async (
             }
           }
         });
-      } 
+      }
       else {
         if (attack_placeholders_type === "dos") {
           console.log("DoS attack finished");
           console.log(data);
-          data.dos = data;
+          // data.dos = data;
 
           await writeJsonSync(
             `./report-${hostname}/attacks/${operation_name}.results`,
