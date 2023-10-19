@@ -1,5 +1,7 @@
 # graudit-cli
 
+!! This was software built as part of my dissertation for an MSc in Software and Systems Security at Oxford
+
 GraphQL DAST CLI reporting and pen-testing tool.
 
 The primary purpose of this tool is to audit a given GraphQL endpoint to detect
